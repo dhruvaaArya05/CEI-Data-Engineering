@@ -207,17 +207,57 @@ INSERT INTO products VALUE (209, 'Analog watch' , 'Clothing' ,'Titan', -50.00, 1
 SELECT status, order_id FROM orders
 WHERE status = 'Delivered';
 
+/*
+RESULT:
+status    | order_id
+----------|----------
+Delivered | 1001
+Delivered | 1002
+Delivered | 1004
+Delivered | 1006
+Delivered | 1008
+Delivered | 1010
+*/
+
 #Q.8
 SELECT category, product_id, product_name FROM products
 WHERE unit_price > 2000.00
+
+/*
+RESULT:
+category    | product_id | product_name
+------------|------------|------------------
+Electronics | 203        | Smart Watch
+Clothing    | 204        | Running Shoes
+Electronics | 205        | Bluetooth Speaker
+*/
 
 #Q.9
 SELECT first_name, last_name FROM customers
 WHERE ((join_date >= '2024-01-01' AND join_date <= '2024-12-31') AND (state = 'Maharashtra'))
 
+/*
+RESULT:
+first_name | last_name
+-----------|----------
+Aarav      | Sharma
+Karan      | Mehta
+*/
+
 #Q.10
 SELECT order_id FROM orders
 WHERE (order_date >= '2024-08-10' AND order_date <= '2024-08-25') AND ( status != 'Cancelled')
+
+/*
+RESULT:
+order_id
+--------
+1004
+1006
+1007
+1008
+1009
+*/
 
 #Q.11
 /*idx_orders_date is an index created on the order_date column of the orders table.
@@ -240,9 +280,23 @@ WHERE join_date >= '2024-01-01' AND join_date < '2025-01-01';
 #Q.13
 SELECT COUNT(order_id) AS total_orders FROM orders;
 
+/*
+RESULT:
+total_orders
+------------
+10
+*/
+
 #Q.14
 SELECT SUM(total_amount) AS total_revenue  FROM orders
 WHERE status = 'Delivered';
+
+/*
+RESULT:
+total_revenue
+-------------
+17191.00
+*/
 
 #Q.15
 SELECT category, AVG(unit_price) AS average_unit_price 
@@ -259,6 +313,15 @@ ORDER BY total_revenue DESC;
 SELECT category, MAX(unit_price), MIN(unit_price) FROM products
 GROUP BY category;
 
+/*
+RESULT:
+category    | MAX(unit_price) | MIN(unit_price)
+------------|-----------------|----------------
+Clothing    | 4599.00         | 799.00
+Electronics | 3499.00         | 899.00
+Home        | 1299.00         | 599.00
+*/
+
 #Q.18
 SELECT category, AVG(unit_price) AS avg_unit_price FROM products
 GROUP BY category
@@ -272,11 +335,42 @@ FROM customers AS c
 INNER JOIN orders AS o
 ON c.customer_id = o.customer_id;
 
+/*
+RESULT:
+order_id | order_date | first_name | last_name | total_amount
+---------|------------|------------|-----------|-------------
+1004     | 2024-08-10 | Aarav      | Sharma    | 3499.00
+1002     | 2024-08-03 | Priya      | Patel     | 799.00
+1003     | 2024-08-05 | Rohan      | Gupta     | 7498.00
+1008     | 2024-08-20 | Rohan      | Gupta     | 899.00
+1005     | 2024-08-12 | Sneha      | Reddy     | 2999.00
+1006     | 2024-08-15 | Vikram     | Singh     | 5898.00
+1007     | 2024-08-18 | Ananya     | Iyer      | 1299.00
+1009     | 2024-08-25 | Karan      | Mehta     | 6098.00
+1010     | 2024-08-28 | Divya      | Nair      | 1598.00
+*/
+
 #Q.20
 SELECT c.customer_id, c.first_name, c.last_name, o.order_id
 FROM customers AS c
 LEFT JOIN orders AS o
 On c.customer_id = o.customer_id;
+
+/*
+RESULT:
+customer_id | first_name | last_name | order_id
+------------|------------|-----------|----------
+101         | Aarav      | Sharma    | 1001
+101         | Aarav      | Sharma    | 1004
+102         | Priya      | Patel     | 1002
+103         | Rohan      | Gupta     | 1003
+103         | Rohan      | Gupta     | 1008
+104         | Sneha      | Reddy     | 1005
+105         | Vikram     | Singh     | 1006
+106         | Ananya     | Iyer      | 1007
+107         | Karan      | Mehta     | 1009
+108         | Divya      | Nair      | 1010
+*/
 
 #Q.21
 SELECT
@@ -291,6 +385,18 @@ ON o.order_id = oi.order_id
 INNER JOIN products AS p
 ON oi.product_id = p.product_id
 ORDER BY o.order_id, p.product_name;
+
+/*
+RESULT:
+order_id | product_name      | quantity | unit_price | discount_pct
+---------|-------------------|----------|------------|-------------
+1001     | Laptop Stand      | 1        | 899.00     | 10.00
+1001     | Wireless Earbuds  | 2        | 1499.00    | 0.00
+1002     | Cotton T-Shirt    | 1        | 799.00     | 0.00
+1003     | Running Shoes     | 1        | 4599.00    | 5.00
+1003     | Smart Watch       | 1        | 2999.00    | 0.00
+1004     | Bluetooth Speaker | 1        | 3499.00    | 0.00
+*/
 
 
 #Q.22
@@ -344,6 +450,20 @@ VALUES
  END AS price_tier
  FROM products
  ORDER BY unit_price;
+
+/*
+RESULT:
+product_id | product_name       | unit_price | price_tier
+-----------|--------------------|------------|----------
+208        | Cushion Covers(Set) | 599.00    | Budget
+202        | Cotton T-Shirt     | 799.00     | Budget
+207        | Laptop Stand       | 899.00     | Budget
+206        | Bedsheet Set       | 1299.00    | Mid-Range
+201        | Wireless Earbuds   | 1499.00    | Mid-Range
+203        | Smart Watch        | 2999.00    | Mid-Range
+205        | Bluetooth Speaker  | 3499.00    | Premium
+204        | Running Shoes      | 4599.00    | Premium
+*/
  
  #Q.25
  SELECT
@@ -364,6 +484,13 @@ VALUES
         ELSE 0
         END) AS pending_orders
 FROM orders;
+
+/*
+RESULT:
+delivered_orders | shipped_orders | cancelled_orders | pending_orders
+-----------------|----------------|------------------|---------------
+6                | 2              | 1                | 1
+*/
  
  
 #Q.26
