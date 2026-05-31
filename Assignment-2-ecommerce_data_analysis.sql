@@ -120,14 +120,65 @@ INSERT INTO order_items VALUES
 #Q.1
 SELECT * FROM customers;
 
+/*
+RESULT:
+customer_id | first_name | last_name | email                | city       | state       | join_date  | is_premium
+------------|------------|-----------|----------------------|------------|-------------|------------|----------
+101         | Aarav      | Sharma    | aarav.s@email.com    | Mumbai     | Maharashtra | 2024-01-15 | 1
+102         | Priya      | Patel     | priya.p@email.com    | Ahmedabad  | Gujarat     | 2024-02-20 | 0
+103         | Rohan      | Gupta     | rohan.g@email.com    | Delhi      | Delhi       | 2024-03-10 | 1
+104         | Sneha      | Reddy     | sneha.r@email.com    | Hyderabad  | Telangana   | 2024-04-05 | 0
+105         | Vikram     | Singh     | vikram.s@email.com   | Jaipur     | Rajasthan   | 2024-05-12 | 1
+106         | Ananya     | Iyer      | ananya.i@email.com   | Chennai    | Tamil Nadu  | 2024-06-18 | 0
+107         | Karan      | Mehta     | karan.m@email.com    | Pune       | Maharashtra | 2024-07-22 | 1
+108         | Divya      | Nair      | divya.n@email.com    | Kochi      | Kerala      | 2024-08-30 | 0
+*/
+
 #Q.2
 SELECT first_name, last_name, city FROM customers;
 
+/*
+RESULT:
+first_name | last_name | city
+-----------|-----------|----------
+Aarav      | Sharma    | Mumbai
+Priya      | Patel     | Ahmedabad
+Rohan      | Gupta     | Delhi
+Sneha      | Reddy     | Hyderabad
+Vikram     | Singh     | Jaipur
+Ananya     | Iyer      | Chennai
+Karan      | Mehta     | Pune
+Divya      | Nair      | Kochi
+*/
+
 DESCRIBE customers; #schema
+
+	/*
+RESULT:
+Field       | Type         | Null | Key | Default | Extra
+------------|--------------|------|-----|---------|------
+customer_id | int          | NO   | PRI | NULL    |
+first_name  | varchar(50)  | NO   |     | NULL    |
+last_name   | varchar(50)  | NO   |     | NULL    |
+email       | varchar(100) | NO   | UNI | NULL    |
+city        | varchar(50)  | NO   | MUL | NULL    |
+state       | varchar(50)  | NO   | MUL | NULL    |
+join_date   | date         | NO   |     | NULL    |
+is_premium  | tinyint(1)   | YES  |     | 0       |
+*/
 
 #Q.3
 SELECT DISTINCT category
 FROM products;
+
+/*
+RESULT:
+category
+-----------
+Clothing
+Electronics
+Home
+*/
 
 #Q.4
 DESCRIBE customers; -- Primary key - customer_id
