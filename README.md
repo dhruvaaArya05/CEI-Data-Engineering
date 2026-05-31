@@ -35,13 +35,6 @@ This project performs SQL-based data analysis using filtering, aggregation, and 
 ## Project Summary
 The project perform comprehensive sales data analysis using SQL. The analysis focuses on leveraging data filtering, aggregations, and structured business queries to extract actionable insights, evaluate trends, and ensure data quality.
 
-## Tools Used
-- SQL
-- MySQL Workbench
-- Pandas
-- Jupyter Notebook
-- PyCharm
-
 ## Key Tasks Performed
 - Load dataset into a SQL database
 - Explore table (schema, sample data)
@@ -51,8 +44,15 @@ The project perform comprehensive sales data analysis using SQL. The analysis fo
 - Solve use cases (monthly trends, top customers, duplicates)
 - Validate results (row counts, data quality)
 
-- ## Outcome
-- The Final submission consists of SQL script, executed query results, and a summary of brief business insights.
+## Tools Used
+- SQL
+- MySQL Workbench
+- Pandas
+- Jupyter Notebook
+- PyCharm
+
+## Outcome
+The Final submission consists of SQL script, executed query results, and a summary of brief business insights.
 
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
