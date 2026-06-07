@@ -54,6 +54,27 @@ The project perform comprehensive sales data analysis using SQL. The analysis fo
 ## Outcome
 The Final submission consists of SQL script, executed query results, and a summary of brief business insights.
 
+# 🚀 CEI - Data Engineering Assignment Week-3
+
+## Overview
+A SQL-based sales analysis project that transforms raw Superstore data into business insights using three core techniques: 
+Subqueries
+CTEs
+Window Functions
+
+## Key Tasks Performed
+- Load the Superstore dataset into a superstore_raw table
+- Create structured tables: customers, orders, products
+- Populate tables using SELECT DISTINCT
+- Apply subqueries to filter above-average sales and find each customer's highest order
+- Use CTEs to compute total sales per customer
+- Apply window functions (ROW_NUMBER, RANK) for ranking
+- Combine JOIN + CTE + Window Functions for a final result showing customer, total sales, and rank
+- Answer business queries: top customers, low customers, single-order customers, above-average sales
+
+## Outcome
+A SQL script or notebook with query results and brief insights.
+
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
 
