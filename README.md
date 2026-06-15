@@ -78,3 +78,17 @@ A SQL script or notebook with query results and brief insights.
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
 
+# 🚀 CEI - Data Engineering Assignment Week-4
+
+## Overview
+Build an end-to-end data pipeline on Azure using Storage Account and Azure Data Factory (ADF), while understanding core Azure cloud concepts.
+
+## Project Summary
+This is a hands-on cloud data engineering project that walks through setting up a complete data ingestion and transformation pipeline on Microsoft Azure — from raw file storage to pipeline execution and monitoring.
+
+## Key Tasks Performed
+- Azure Portal Setup
+- Storage Configuration
+- ADF Setup
+- Linked Dataset and Services
+- IAM & Access Control
