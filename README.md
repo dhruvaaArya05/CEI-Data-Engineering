@@ -75,9 +75,6 @@ Window Functions
 ## Outcome
 A SQL script or notebook with query results and brief insights.
 
-## Author
-Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
-
 # 🚀 CEI - Data Engineering Assignment Week-4
 
 ## Overview
@@ -92,3 +89,6 @@ This is a hands-on cloud data engineering project that walks through setting up 
 - ADF Setup
 - Linked Dataset and Services
 - IAM & Access Control
+
+## Author
+Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
