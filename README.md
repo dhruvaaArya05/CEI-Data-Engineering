@@ -90,5 +90,29 @@ This is a hands-on cloud data engineering project that walks through setting up 
 - Linked Dataset and Services
 - IAM & Access Control
 
+# 🚀 CEI - Data Engineering Assignment Week-5
+
+## Overview
+This project focuses on learning Apache Spark DataFrames and performing data cleaning, transformation, filtering, and aggregation on large datasets. It highlights Spark's advantages over MapReduce, including faster in-memory processing and efficient distributed computing.
+
+## Project Summary
+Built a data processing pipeline using PySpark to clean and transform data, handle duplicates and null values, manage schemas, perform filtering and aggregations, and generate insights through grouped analysis. The project also explored Spark concepts such as immutability, shuffle operations, and wide transformations.
+
+## Key Tasks Performed
+- Removed duplicate records and handled null values.
+- Applied filters based on age, category, region, and subscription type.
+- Renamed and dropped columns as part of data cleaning.
+- Cast columns to appropriate data types (e.g., timestamps).
+- Performed aggregations using count, sum, avg, min, and max.
+- Used groupBy() for category-wise and city-wise analysis.
+- Built an end-to-end Spark DataFrame processing pipeline.
+- Studied shuffle operations and DataFrame immutability concepts.
+
+## Tools Used
+- Apache Spark
+- PySpark
+- Spark DataFrames
+- Python
+
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
