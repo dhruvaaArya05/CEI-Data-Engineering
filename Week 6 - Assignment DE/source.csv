@@ -1,0 +1,11 @@
+product_id,category,price,base_price,region,priority,user_id,status,amount,old_name
+101,Electronics,799.99,678.00,North,High,1001,Completed,1500,Product_A
+102,Furniture,450.50,382.00,South,Low,1002,Pending,800,Product_B
+103,Electronics,1299.99,1101.69,East,High,1003,Completed,2500,Product_C
+104,Clothing,99.99,84.74,West,Medium,1004,Completed,600,Product_D
+105,Electronics,599.00,507.63,North,High,,Completed,1800,Product_E
+106,Furniture,750.00,635.59,South,Medium,1006,Cancelled,1200,Product_F
+107,Clothing,120.00,101.69,East,Low,1007,Completed,300,Product_G
+108,Electronics,899.99,762.70,North,High,1008,Completed,2200,Product_H
+109,Furniture,300.00,254.24,West,Low,,Pending,500,Product_I
+110,Electronics,1499.99,1271.18,North,High,1010,Completed,3500,Product_J
