@@ -114,5 +114,28 @@ Built a data processing pipeline using PySpark to clean and transform data, hand
 - Spark DataFrames
 - Python
 
+# 🚀 CEI - Data Engineering Assignment Week-7
+
+## Overview
+Perform incremental data processing using Delta Lake.
+
+## Dataset
+- customer_master.csv
+- customer_incremental.csv
+
+## Key Tasks Performed
+- Loaded source datasets.
+- Removed nulls and duplicates.
+- Created a Delta table from the master dataset.
+- Performed Delta MERGE operation.
+- Updated existing records.
+- Inserted new records.
+- Validated final row count and output.
+
+## Tools Used
+- Databricks
+- Apache Spark
+- Delta Lake
+
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
