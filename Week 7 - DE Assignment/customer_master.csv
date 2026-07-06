@@ -1,0 +1,11 @@
+customer_id,name,gender,age,city,state,email,phone,join_date,status
+1001,Alice Johnson,Female,28,New York,NY,alice.johnson@gmail.com,9876543210,2022-01-15,Active
+1002,Bob Smith,Male,35,Chicago,IL,bob.smith@gmail.com,9876543211,2022-03-10,Active
+1003,Charlie Brown,Male,40,Dallas,TX,charlie.brown@gmail.com,9876543212,2021-12-05,Inactive
+1004,David Wilson,Male,30,Boston,MA,david.wilson@gmail.com,9876543213,2023-02-18,Active
+1005,Emma Davis,Female,26,Miami,FL,emma.davis@gmail.com,9876543214,2022-05-12,Active
+1006,Frank Miller,Male,45,Seattle,WA,frank.miller@gmail.com,9876543215,2021-08-20,Inactive
+1007,Grace Lee,Female,32,San Francisco,CA,grace.lee@gmail.com,9876543216,2023-01-08,Active
+1008,Henry Clark,Male,29,Denver,CO,henry.clark@gmail.com,9876543217,2022-10-11,Active
+1009,Ivy Thomas,Female,38,Atlanta,GA,ivy.thomas@gmail.com,9876543218,2021-11-25,Active
+1010,Jack White,Male,41,Phoenix,AZ,jack.white@gmail.com,9876543219,2022-06-30,Inactive

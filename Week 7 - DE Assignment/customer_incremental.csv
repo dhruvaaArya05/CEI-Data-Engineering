@@ -1,0 +1,7 @@
+customer_id,name,gender,age,city,state,email,phone,join_date,status
+1002,Bob Smith,Male,35,Seattle,WA,bob.smith@gmail.com,9876543211,2022-03-10,Active
+1004,David Wilson,Male,31,Boston,MA,david.wilson@company.com,9876543213,2023-02-18,Active
+1007,Grace Lee,Female,32,Los Angeles,CA,grace.lee@gmail.com,9876543216,2023-01-08,Active
+1011,Karen Scott,Female,27,Houston,TX,karen.scott@gmail.com,9876543220,2024-01-15,Active
+1012,Liam Harris,Male,33,Portland,OR,liam.harris@gmail.com,9876543221,2024-02-20,Active
+1013,Mia Walker,Female,25,Las Vegas,NV,mia.walker@gmail.com,9876543222,2024-03-01,Active
