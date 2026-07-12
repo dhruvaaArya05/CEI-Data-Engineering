@@ -137,5 +137,242 @@ Perform incremental data processing using Delta Lake.
 - Apache Spark
 - Delta Lake
 
+# E-Commerce Order Analytics System Week-8
+
+## Project Overview
+
+This project is an E-Commerce Order Analytics System developed using **Python**, **Pandas**, and **SQLite**. It simulates an online shopping platform by generating sample data, cleaning and validating it, storing it in a SQLite database, and generating business reports using SQL queries.
+
+This project was developed as part of an internship mini project to demonstrate data processing, database management, and SQL analysis skills.
+
+---
+
+## Technologies Used
+
+- Python 3.x
+- Pandas
+- Faker
+- SQLite3
+
+---
+
+## Project Structure
+
+```
+E-Commerce System/
+│
+├── data/
+│   ├── customers.csv
+│   ├── products.csv
+│   ├── orders.csv
+│   └── order_items.csv
+│
+├── cleaned/
+│   ├── customers_clean.csv
+│   ├── products_clean.csv
+│   ├── orders_clean.csv
+│   ├── order_items_clean.csv
+│   ├── invalid_emails.csv
+│   ├── invalid_order_items.csv
+│   └── issues_report.txt
+│
+├── database/
+│   └── ecommerce.db
+│
+├── scripts/
+│   ├── data_generator.py
+│   ├── clean_data.py
+│   ├── load_db.py
+│   ├── queries.py
+│   ├── report.py
+│   └── tests.py
+│
+├── sql/
+│   └── queries.sql
+│
+└── README.md
+```
+
+---
+
+## Features
+
+### 1. Data Generation
+
+The application generates four CSV files containing sample e-commerce data.
+
+- Customers
+- Products
+- Orders
+- Order Items
+
+The generated data also includes intentional data quality issues such as:
+
+- Missing customer IDs
+- Invalid email addresses
+- Incorrect date formats
+- Negative quantities
+- Product names with inconsistent formatting
+
+---
+
+### 2. Data Cleaning
+
+The cleaning module performs the following tasks:
+
+- Converts incorrect date formats
+- Handles missing customer IDs
+- Removes duplicate records
+- Normalizes product names
+- Validates customer email addresses
+- Checks referential integrity
+- Generates an issues report
+
+---
+
+### 3. Database Creation
+
+The cleaned CSV files are loaded into a SQLite database.
+
+Database Tables:
+
+- customers
+- products
+- orders
+- order_items
+
+---
+
+### 4. SQL Analysis
+
+The project includes SQL queries for business analysis such as:
+
+- Total revenue by category
+- Top 10 customers
+- Monthly order count
+- Return rate analysis
+- Running totals
+- Product ranking
+- Customer segmentation
+- Year-over-Year comparison
+- Cohort analysis
+- Frequently bought together products
+
+---
+
+### 5. Reporting
+
+The command-line reporting tool allows users to generate reports based on a selected date range.
+
+The report displays:
+
+- Total orders
+- Revenue
+- Unique customers
+- Top 3 products
+- Revenue comparison with previous period
+
+---
+
+### 6. Testing
+
+The project includes edge-case tests for:
+
+- Invalid Order IDs
+- Discount greater than 100%
+- Zero quantity
+- Future order dates
+
+---
+
+## How to Run the Project
+
+### Step 1
+
+Install the required libraries
+
+```bash
+pip install pandas faker
+```
+
+---
+
+### Step 2
+
+Generate sample data
+
+```bash
+python scripts/data_generator.py
+```
+
+---
+
+### Step 3
+
+Clean the generated data
+
+```bash
+python scripts/clean_data.py
+```
+
+---
+
+### Step 4
+
+Load the cleaned data into SQLite
+
+```bash
+python scripts/load_db.py
+```
+
+---
+
+### Step 5
+
+Run SQL queries
+
+Open the SQLite database (`database/ecommerce.db`) using DB Browser for SQLite or execute the SQL queries from the `sql/queries.sql` file.
+
+---
+
+### Step 6
+
+Generate reports
+
+```bash
+python scripts/report.py
+```
+
+---
+
+### Step 7
+
+Run test cases
+
+```bash
+python scripts/tests.py
+```
+
+---
+
+## Learning Outcomes
+
+This project demonstrates:
+
+- Python programming
+- Data generation using Faker
+- Data cleaning with Pandas
+- Data validation
+- SQLite database operations
+- SQL joins and aggregations
+- Window functions
+- Common Table Expressions (CTEs)
+- Business reporting
+- Basic software testing
+
+---
+
+Intern Mini Project – E-Commerce Order Analytics System
+
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
