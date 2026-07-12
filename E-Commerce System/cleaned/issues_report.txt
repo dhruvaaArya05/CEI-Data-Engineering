@@ -1,0 +1,10 @@
+DATA CLEANING REPORT
+----------------------------
+
+Invalid Dates Found : 21
+Missing Customer IDs : 11
+Duplicate Orders Removed : 0
+Invalid Emails : 16
+Invalid Order References : 0
+Negative Quantity Rows : 25
+Discount Greater Than 100 : 0
