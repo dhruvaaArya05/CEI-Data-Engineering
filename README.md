@@ -149,7 +149,7 @@ This project was developed as part of an internship mini project to demonstrate 
 
 ## Technologies Used
 
-- Python 3.x
+- Python
 - Pandas
 - Faker
 - SQLite3
@@ -176,19 +176,17 @@ E-Commerce System/
 │   ├── invalid_order_items.csv
 │   └── issues_report.txt
 │
-├── database/
-│   └── ecommerce.db
+|
+│── ecommerce.db
 │
 ├── scripts/
-│   ├── data_generator.py
-│   ├── clean_data.py
-│   ├── load_db.py
 │   ├── queries.py
 │   ├── report.py
 │   └── tests.py
 │
-├── sql/
-│   └── queries.sql
+│── data_generator.py
+│── clean_data.py
+│── load_db.py
 │
 └── README.md
 ```
