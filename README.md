@@ -372,5 +372,190 @@ This project demonstrates:
 
 Intern Mini Project – E-Commerce Order Analytics System
 
+# Healthcare Medallion Architecture using Databricks (Major Project)
+
+## Project Overview
+
+This project demonstrates the implementation of a Medallion Architecture (Bronze, Silver, and Gold layers) using Databricks, PySpark, and Delta Lake for a healthcare management system.
+
+The project ingests raw healthcare data from multiple CSV files, cleans and transforms the data, and creates business-ready datasets for reporting and analytics.
+
+---
+
+## Technology Stack
+
+- Databricks Free Edition
+- Apache Spark (PySpark)
+- Delta Lake
+- Unity Catalog
+- SQL
+- Python
+
+---
+
+## Dataset
+
+The project uses five healthcare datasets:
+
+- Patients
+- Appointments
+- Doctors
+- Treatments
+- Billing
+
+---
+
+## Project Architecture
+
+```
+CSV Files
+     │
+     ▼
+Bronze Layer
+(Raw Data)
+     │
+     ▼
+Silver Layer
+(Cleansed & Enriched Data)
+     │
+     ▼
+Gold Layer
+(Business KPIs & Reporting)
+```
+
+---
+
+## Bronze Layer
+
+The Bronze layer stores the raw source data without business transformations.
+
+### Tasks Performed
+
+- Read CSV files
+- Metadata-driven ingestion
+- Added ingestion timestamp
+- Added batch ID
+- Added source file information
+- Stored data as Delta tables
+
+### Bronze Tables
+
+- bronze.patients
+- bronze.appointments
+- bronze.billing
+- bronze.doctors
+- bronze.treatments
+
+---
+
+## Silver Layer
+
+The Silver layer cleans and enriches the raw data.
+
+### Patients
+
+- Removed duplicate records
+- Trimmed text fields
+- Standardized email addresses
+- Converted dates
+- Created patient full name
+
+### Appointments
+
+- Removed duplicates
+- Converted appointment dates
+- Joined with Patients
+- Joined with Doctors
+- Created doctor full name
+
+### Billing
+
+- Removed duplicates
+- Converted bill dates
+- Converted amount to numeric
+- Standardized payment status
+- Joined with Patients
+- Joined with Treatments
+
+### Doctors
+
+- Removed duplicates
+- Cleaned text columns
+- Converted years of experience
+- Created doctor full name
+
+### Treatments
+
+- Removed duplicates
+- Converted treatment cost
+- Converted treatment date
+- Joined with appointment information
+
+---
+
+## Gold Layer
+
+The Gold layer provides business-ready datasets.
+
+### KPIs Created
+
+- Total Patients
+- Appointment Status Summary
+- Total Revenue
+- Revenue by Payment Method
+- Revenue by Treatment Type
+- Top Doctors by Appointments
+- Monthly Revenue
+- Dashboard Summary
+
+---
+
+## Audit Report
+
+An audit report was created to summarize pipeline execution.
+
+It includes:
+
+- Pipeline run time
+- Number of patients processed
+- Number of appointments processed
+- Number of billing records
+- Number of doctors
+- Number of treatments
+
+---
+
+## Project Structure
+
+```
+Healthcare_Medallion_Project/
+
+│
+├── 00_setup_config
+├── 01_ingest_bronze
+├── 02_silver_patients
+├── 03_silver_appointments
+├── 04_silver_billing
+├── 05_silver_doctors_treatments
+├── 06_gold_kpis
+└── 07_audit_report
+```
+
+---
+
+## Business Benefits
+
+- Centralized healthcare data
+- Improved data quality
+- Faster reporting
+- Reliable business KPIs
+- Scalable data pipeline using Medallion Architecture
+
+---
+
+Healthcare Medallion Architecture Project
+
+Built using Databricks, PySpark, and Delta Lake.
+
 ## Author
 Dhruva Keshav Arya - Data Engineering Intern @ Celebal Technologies
